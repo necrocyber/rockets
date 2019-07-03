@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "dev": "nodemon src/index.js --exec babel-node"
+    "dev": "nodemon src/index.js --exec babel-node",
+    "test": "mocha test/*.js --timeout 15000"
   },
   "author": "antonio medel",
   "license": "ISC",
@@ -20,6 +21,10 @@
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4",
+    "node-fetch": "^2.6.0",
     "nodemon": "^1.19.1"
   }
 }
