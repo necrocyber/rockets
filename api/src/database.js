@@ -4,6 +4,8 @@ export async function connect() {
     try {
         await mongoose.connect('mongodb://localhost/rocketsdb', {
             useNewUrlParser: true 
+        }, () => {
+            mongoose.connection.db.dropDatabase();
         })
 
         console.log(">>> MongoDb is connect");
