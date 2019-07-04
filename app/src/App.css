@@ -1,33 +1,132 @@
-.App {
-  text-align: center;
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contenedor {
+  height: 100%;
+}
+
+img {
+  margin-right: 5px;
+}
+
+.row {
+  margin: 0 !important;
+  height: 100%;
+}
+
+/****************************************************************************************/
+
+/*ESTILOS COMPONENTE SEARCH*/
+
+.search {
+  background: #202325;
+  height: 100%;
+  color: #999999;
+}
+
+.title-search {
+  margin-top: 15px;
+  color: #eeeeee;
+}
+
+.title-list {
+  color: #eeeeee;
+}
+
+.box-search {
   display: flex;
-  flex-direction: column;
+}
+
+.row-list {
+  cursor: pointer;
+}
+
+.input-search {
+  display: flex;
+  padding: .375rem .75rem;
+  height: calc(1.5em + .75rem + 2px); 
+  flex: 1 1 auto;
+  border: solid 1px white;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.badge-search {
+  display: flex;
+  background: white;
+  padding: .375rem .75rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+hr {
+  background: #999999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*ESTILOS COMPONENTE LIBRARY*/
+
+.library {
+  background: #24292A;
+  height: 100%;
+  overflow-y: scroll;
+  padding-bottom: 30px;
+}
+
+.container-fluid {
+  padding-bottom: 80px;
+}
+
+.image-resize {
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.col-9 {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.card {
+  margin-top: 15px;
+  margin-right: 15px;
+  border: none !important;
+  border-radius: 0px !important;
+  float: left;
+}
+
+.card-body {
+  padding: 0px !important;
+  border-radius: 0px !important;
+}
+
+.card-footer {
+  padding: 5px !important;
+  background: #202325;
+  border-radius: 0px !important;
+  color: #999999;
+  font-size: 1em;
+  height: 67px;
+}
+
+.clean-col {
+  padding: 0px !important;
+}
+
+img {
+  border-radius: 0px !important;
 }

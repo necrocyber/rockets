@@ -1,6 +1,7 @@
 import express, { json } from 'express'
 import bodyParser from 'body-parser'
 import morgan from 'morgan'
+import cors from 'cors'
 import index from './routes/index.route'
 import { connect } from './database'
 
@@ -10,6 +11,7 @@ connect()
 // Middleware
 app.use(json())
 app.use(morgan('dev'))
+app.use(cors())
 app.use(bodyParser.urlencoded({
     extended: true
 }));

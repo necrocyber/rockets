@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Search from './components/search'
+import Library from './components/library'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      film : {}
+    }
+  }
+
+  addFilmSelect(event) {
+    this.setState({ film : event })
+  }
+
+  render() {
+    return (
+      <div className="contenedor">
+        <nav className="navbar navbar-dark bg-dark">
+          <a className="navbar-brand" href="#/">
+          <img src="/logo.png" width="30" height="30" className="d-inline-block align-top" alt=""/>
+            Rokketlabs
+          </a>
+        </nav>
+        <div className="row">
+          <Search addFilmSelect={this.addFilmSelect.bind(this)} />
+          <Library selectFilm={this.state.film} />
+        </div>
+      </div>
+    )
+  }
+  
 }
 
 export default App;
